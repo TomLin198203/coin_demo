@@ -1,0 +1,16 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="查詢,從數據庫中查詢全部資料" th:onclick="location='/list'"/><br/>
+<input type="button" value="新增,把資料新增到數據庫" th:onclick="location='/add'"/><br/>
+<input type="button" value="更新,若資料庫中有資料,按(查詢)按鈕後,有此功能"/><br/>
+<input type="button" value="刪除,若資料庫中有資料,按(查詢)按鈕後,有此功能"/><br/>
+<input type="button" value="測試呼叫 coindesk API，並顯示其內容" th:onclick="location='/readAPI'"/><br/>
+<input type="button" value="資料轉換輸出JSON" th:onclick="location='/transfer'"/>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{/update/{id}(id=${coin.id})}">
+    代碼:<input type="text" name="code" th:value="${coin.code}"><br/>
+    幣別:<input type="text" name="name" th:value="${coin.name}"><br/>
+    匯率:<input type="text" name="rate" th:value="${coin.rate}"><br/>
+    <input type="submit" value="修改確認">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1>Hello World！</h1>-->
+
+<form method="post" th:action="@{/coin}">
+    代碼:<input type="text" name="code"><br/>
+    幣別:<input type="text" name="name"><br/>
+    匯率:<input type="text" name="rate"><br/>
+    <input type="submit" value="新增">
+</form>
+
+</body>
+</html>

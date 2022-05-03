@@ -1,0 +1,40 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1>Hello World！</h1>-->
+
+<table border="1">
+    <thead>
+        <th>#</th>
+<!--        <th>id</th>-->
+        <th>代碼</th>
+        <th>幣別</th>
+        <th>匯率</th>
+        <th>更新時間</th>
+        <th>操作</th>
+<!--        <th>update_time</th>-->
+    </thead>
+    <tbody>
+        <tr th:each="coin,stat:${coinList}">
+            <td th:text="${stat.count}">xxx</td>
+<!--            <td th:text="${coin.id}"></td>-->
+            <td th:text="${coin.code}"></td>
+            <td th:text="${coin.name}"></td>
+            <td th:text="${coin.rate}"></td>
+            <td th:text="${#dates.format(coin.update_time,'yyyy/MM/dd HH:mm:ss')}">xxx</td>
+            <td>
+<!--                <input type="button" value="delete" th:onclick="location='/delete/{id}(id=${coin.id})'">-->
+                <a th:href="@{/delete/{id}(id=${coin.id})}">刪除</a>
+                <a th:href="@{/updatePage/{id}(id=${coin.id})}">修改</a>
+            </td>
+<!--            <td th:text="${coin.update_time}">null</td>-->
+        </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>
